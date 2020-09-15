@@ -1,0 +1,19 @@
+###服务端口号
+server:
+  port: 9100
+###服务名称(服务注册到eureka名称)  
+spring:
+    application:
+        name: app-itmayiedu-eureka  
+###eureka 基本信息配置
+eureka:
+  instance:
+    ###注册到eurekaip地址
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8100/eureka/
+###是否注册
+    register-with-eureka: true
+###是否需要检索服务
+    fetch-registry: true
